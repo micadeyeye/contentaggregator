@@ -39,13 +39,11 @@ OpenCast
 <section>
 <div id="listofpresentations">
 <div id="video">
-<a href="viewvideo.html">
 <video id="video_control" width="320" height="240" controls="controls" autoplay="autoplay" preload="auto">
   <source src="<?php echo $_GET["id"]; ?>" type="video/mp4" />
   <source src="<?php echo $_GET["id"]; ?>" type="video/ogg" />
   Your browser does not support the video tag.
 </video> 
-</a>
 </div>
 <!-- 1. The <div> tag will contain the <iframe> (and video player)
 <div id="player"></div>
