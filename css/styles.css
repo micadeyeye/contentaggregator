@@ -1,0 +1,61 @@
+#banner {
+    padding: 8px;
+    width: 100%;
+    text-align: center;
+    border: 2px #00cccc dashed;
+    color: #0000ff;
+}
+#mainpage {
+border: 5px #000000 solid;
+}
+#search_textfield {
+    width: 100%;
+    text-align: center;
+    top: 0px;
+    border: 2px #0000cc dashed;
+ }
+#listofpresentations {
+    position: relative;
+    border: 2px #0000cc dashed;
+    text-align: center;
+    height: 250px;
+}
+#video {
+    width: 35%;
+}
+/*#video  #player was previously #video #video_control */
+#video #video_control {
+    position: absolute;
+    width: 322px;
+    border: 1px #000000 dashed;
+}
+
+/*#video  #player was previously #video #video_control */
+#video #player {
+    position: absolute;
+    width: 322px;
+    border: 1px #000000 dashed;
+}
+
+#title, #date_published, #total_comments, #view_comments {
+    text-align: left;
+    left: 43%;
+    position: relative;
+    width: 100%;
+    top: 0px;
+}
+#comments, #write_comment, #clips_controller {
+    text-align: left;
+    left: 18%;
+    position: relative;
+    width: 100%;
+}
+#heading {
+    font-family: Tahoma, Arial, Verdana, Sans-Serif;
+    font-size: 1.2em;
+    color: #0000ff;
+    font-weight: bold;
+}
+#indentation {
+    padding-left: 15px;
+}
