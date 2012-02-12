@@ -1,7 +1,0 @@
-<?php
-
-$host='localhost';   // Hostname of MySQL server
-$dbUser='mike';    // Username for MySQL
-$dbPass='mk4nd';    // Password for user
-$dbName='opencast'; // database name
-?>
