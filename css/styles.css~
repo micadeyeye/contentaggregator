@@ -20,12 +20,6 @@ border: 5px #000000 solid;
     text-align: center;
     height: 250px;
 }
-#viewpresentation {
-    position: relative;
-    border: 2px #0000cc dashed;
-    text-align: center;
-    height: 365px;
-}
 #video {
     width: 35%;
 }

@@ -1,3 +1,13 @@
+<?php
+require("database/strip_quotes.php");
+
+require("database/strip_quotes_addslash.php");
+
+require("main.php");
+
+$instmedialist = new medialist();
+if(isset($_POST['submit'])){$instmedialist->savecomments();}
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -10,6 +20,7 @@
 </script>
 </head>
 <body>
+<form name='commentform' method='post'>
 <div id="mainpage">
 <header>
 <div id="banner">
@@ -37,25 +48,33 @@ OpenCast
 -->
 
 <section>
-<div id="listofpresentations">
+<div id="viewpresentation">
 <div id="video">
-<video id="video_control" width="320" height="240" controls="controls" autoplay="autoplay" preload="auto">
+<video id="video_control" width="480" height="360" controls="controls" autoplay="autoplay" preload="auto">
   <source src="<?php echo $_GET["id"]; ?>" type="video/mp4" />
   <source src="<?php echo $_GET["id"]; ?>" type="video/ogg" />
   Your browser does not support the video tag.
-</video> 
+</video>
+<input type='hidden' name='presentation_url' value='<?php echo $_GET["id"]; ?>'/>
 </div>
 <!-- 1. The <div> tag will contain the <iframe> (and video player)
 <div id="player"></div>
 -->
 </div>
-<div id="comments">Comments</div>
-<div id="write_comment">Write Comment</div>
+<div id="commentfield">
+<div id="comments">
+<?php
+$instmedialist->displaycomments();
+?>
+</div>
+<div id="write_comment"><a href="#postcomment" onclick="postcomment();">Write a Comment</a></div>
+</div>
 <div id="clips_controller">Previous Clip | Next Clip</div>
 </section>
 
 
 </div>
 </div>
+</form>
 </body>
 </html>
