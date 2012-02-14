@@ -13,7 +13,7 @@ $html1 = <<<EOD
 <section>
 <div id="listofpresentations">
 <div id="video">
-<a href="viewvideo.php?id=
+<a href="viewvideo.php?vid=
 EOD;
 $html2 = <<<EOD
 "><video id="video_control" width="320" height="240" controls="controls">
@@ -77,9 +77,9 @@ foreach($feedurls as $feedurl){
 //storing values in DB for search functionality
 
 //instantiating variables begin
-$this->titles=$titles[$n];
-$this->pubDates=$pubDates[$n];
-$this->urls=$urls[$n];
+$this->titles=safeAddSlashes($titles[$n]);
+$this->pubDates=safeAddSlashes($pubDates[$n]);
+$this->urls=safeAddSlashes($urls[$n]);
 $sql="INSERT mediadetails SET
 str_title='$this->titles',
 time_pubDate='$this->pubDates',
@@ -106,7 +106,7 @@ $this->comment_author = safeAddSlashes($_POST['comment_author']);
 $this->pubDate = date("M j, Y, g:i a");
 $this->comment = safeAddSlashes($_POST['comment']);
 $this->msg_type = $_POST['msg_type'];
-$this->presentation_url = safeAddSlashes($_POST['presentation_url']);
+if(isset($_POST['vid'])){$this->presentation_url = safeAddSlashes($_POST['vid']);}else{$this->presentation_url = safeAddSlashes($_GET['vid']);}
 $sql="INSERT comments SET
 str_presentation_url='$this->presentation_url',
 str_name='$this->comment_author',
@@ -119,11 +119,12 @@ $result=$db->query($sql);
   }//end of savecomment function
 
   function displaycomments(){
+if(isset($_POST['vid'])){$this->presentation_url = safeAddSlashes($_POST['vid']);}else{$this->presentation_url = safeAddSlashes($_GET['vid']);}
 //database connection begins
 require('database/connx.php');
 
 $db = & new MySQL($host,$dbUser,$dbPass,$dbName);
-$sql="select str_name,str_comment,time_pubdate,str_msg_type from comments";
+$sql="select str_name,str_comment,time_pubdate,str_msg_type from comments where str_presentation_url='" . $this->presentation_url . "'";
 $result=$db->query($sql);
 echo "<div><div name='no_of_comments'>" . $result->size() . " comments</div>";
 while ($row = $result->fetch()) {
