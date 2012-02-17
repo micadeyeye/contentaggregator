@@ -1,7 +1,7 @@
 <?php
 
-$host='asmicom.easycgimysql.com';   // Hostname of MySQL server
-$dbUser='olutayo';    // Username for MySQL
-$dbPass='olu123tayo';    // Password for user
+$host='*******';   // Hostname of MySQL server
+$dbUser='**olut*';    // Username for MySQL
+$dbPass='**u123t**';    // Password for user
 $dbName='opencast'; // database name
 ?>
