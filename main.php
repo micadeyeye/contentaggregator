@@ -49,8 +49,9 @@ $html6 = <<<EOD
 </div>
 </section>
 EOD;
-$feedurls = Array('index.rss', 'http://www.youtube.com/rss/tag/uct.rss');
-
+//disabled the uct feed
+//$feedurls = Array('index.rss', 'http://www.youtube.com/rss/tag/uct.rss');
+$feedurls = Array('index.rss');
 require('database/connx.php');
 // Connect to MySQL
 $db = & new MySQL($host,$dbUser,$dbPass,$dbName);
