@@ -2,45 +2,62 @@
     padding: 8px;
     width: 100%;
     text-align: center;
-    border: 2px #00cccc dashed;
+    border: 2px #ffffff dashed;
     color: #0000ff;
+    font-family: Tahoma, Arial, Verdana, Sans-Serif;
+    font-size: 3.5em;
+    color: #0000ff;
+    font-weight: bold;
+}
+#search_textfield #searchterm { background-image: url(../images/search.jpg); 
+            background-repeat: no-repeat;
+            background-position: center left;
+            padding-left: 1em;
+        padding-top: 0.5em;
+	    padding-bottom: 0.5em;
+            -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;
+	    background-color: #f0f0f0;
+	    border-color: #ffffff;
+	    font-weight: bold;
+	    width: 28%;
 }
 #mainpage {
-border: 5px #000000 solid;
+    border: 5px #ffffff solid;
 }
 #search_textfield {
     width: 100%;
     text-align: center;
     top: 0px;
-    border: 2px #0000cc dashed;
+    border: 2px #ffffff dashed;
  }
 #listofpresentations {
     position: relative;
-    border: 2px #0000cc dashed;
+    border: 2px #ffffff dashed;
     text-align: center;
     height: 250px;
 }
 #viewpresentation {
     position: relative;
-    border: 2px #0000cc dashed;
+    border: 2px #ffffff dashed;
     text-align: center;
     height: 365px;
 }
 #video {
     width: 35%;
+    text-align: center;
 }
 /*#video  #player was previously #video #video_control */
 #video #video_control {
     position: absolute;
     width: 322px;
-    border: 1px #000000 dashed;
+    border: 1px #ffffff dashed;
+    text-align: center;
 }
-
 /*#video  #player was previously #video #video_control */
 #video #player {
     position: absolute;
     width: 322px;
-    border: 1px #000000 dashed;
+    border: 1px #ffffff dashed;
 }
 
 #title, #date_published, #total_comments, #view_comments {
@@ -56,11 +73,28 @@ border: 5px #000000 solid;
     position: relative;
     width: 100%;
 }
-#heading {
-    font-family: Tahoma, Arial, Verdana, Sans-Serif;
-    font-size: 1.2em;
-    color: #0000ff;
+#back {
+ background-color: #ff6600;
+ color: #ffffff;
+ font-weight: bold;
+ border-color: #ff6600;
+ padding-left: 1.5em;
+ padding-right: 1.5em;
+ padding-top: 0.3em;
+ padding-bottom: 0.3em;
+}
+#download {
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-image: url(../images/download_.gif); 
+    background-color: #0099cc;
+    color: #ffffff;
     font-weight: bold;
+    border-color: #0099cc;
+    padding-left: 2.0em;
+    padding-right: 1.5em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
 }
 #indentation {
     padding-left: 15px;
