@@ -16,7 +16,7 @@ $html1 = <<<EOD
 <a href="viewvideo.php?vid=
 EOD;
 $html2 = <<<EOD
-"><video id="video_control" width="320" height="240" controls="controls">
+"><video id="video_control" controls="controls">
   <source src="
 EOD;
 
@@ -49,9 +49,10 @@ $html6 = <<<EOD
 </div>
 </section>
 EOD;
-//disabled the uct feed
+//comment disable the youtube feed
 //$feedurls = Array('index.rss', 'http://www.youtube.com/rss/tag/uct.rss');
 $feedurls = Array('index.rss');
+
 require('database/connx.php');
 // Connect to MySQL
 $db = & new MySQL($host,$dbUser,$dbPass,$dbName);
