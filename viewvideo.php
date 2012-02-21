@@ -24,10 +24,10 @@ if(isset($_POST['submit'])){$instmedialist->savecomments();}
 <div id="mainpage">
 <header>
 <div id="banner">
-OpenCast
+<img src="images/cet.gif"/>OPENCAST
 </div>
 </header>
-<div id="search_textfield">Back | Download</div>
+<div id="search_textfield"><input type="button" name="back" id="back" value="Back"/>  <input type="button" id="download" name="download" value="Download"/></div>
 <div>
 
 <!--
@@ -43,7 +43,7 @@ OpenCast
 </div>
 <div id="comments">Comments</div>
 <div id="write_comment">Write a Comment</div>
-<div id="clips_controller">Previous Clip | Next Clip</div>
+<div id="clips_controller"><img src="images/left_images.jpg"/> | <img src="images/right_images.jpg"/></div>
 </section>
 -->
 
@@ -69,7 +69,7 @@ $instmedialist->displaycomments();
 </div>
 <div id="write_comment"><a href="#postcomment" onclick="postcomment();">Write a Comment</a></div>
 </div>
-<div id="clips_controller">Previous Clip | Next Clip</div>
+<div id="clips_controller"><img src="images/__left_images.jpg"/>Previous Clip &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Next Clip <img src="images/__right_images.jpg"/></div>
 </section>
 
 
