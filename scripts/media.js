@@ -1,4 +1,4 @@
-      // 2. This code loads the IFrame Player API code asynchronously.
+// 2. This code loads the IFrame Player API code asynchronously.
       var tag = document.createElement('script');
       tag.src = "http://www.youtube.com/player_api";
       var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -43,7 +43,7 @@ function getValuesfromopencast(){
     alert(values);
 }
 function clearfield(){
-    document.searchterm.value='';
+if(document.getElementById("searchterm").value == '&nbsp;Search') {document.getElementById("searchterm").value = ''};
 }
 function postcomment(){
 var divcontent = document.getElementById('commentfield');
