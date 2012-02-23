@@ -2,7 +2,7 @@
 require("database/strip_quotes.php");
 
 require("database/strip_quotes_addslash.php");
-
+require("main.php");
 ?>
 
 
@@ -18,18 +18,20 @@ require("database/strip_quotes_addslash.php");
 </script>
 </head>
 <body>
+<div id="pagecontent">
 <div id="mainpage">
 <header>
 <div id="banner">
-OpenCast
+<img src="images/cet.gif"/>OPENCAST
 </div>
 </header>
-<form action="search_result.php" method="post" enctype="multipart/form-data"><div id="search_textfield"><input type='text' size='25' name='searchterm' value=""/> <input type='submit' name='submit' Value='Submit'></div></form>
+<form action="search_result.php" method="post" enctype="multipart/form-data"><div id="search_textfield"><input type='text' size='25'class='searchterm'  id='searchterm' name='searchterm' value="&nbsp;&nbsp;&nbsp;Search" onfocus="if(this.value == '&nbsp;&nbsp;&nbsp;Search') { this.value = ''; }"/></div></form>
 <div>
-  <?php require("main.php");
+  <?php
 $instmedialist = new medialist();
 $instmedialist->loadpresentations();
  ?>
+</div>
 </div>
 </div>
 </body>

@@ -1,0 +1,3 @@
+This content aggregator pulls feeds (video & text) from #UCT tag in Youtube (at http://www.youtube.com/rss/tag/uct.rss) and the UCT opencast implementation (called matterhorn at http://media.uct.ac.za/engage/ui).
+
+It allows commenting on the presentations, and a user could search for a presentation from a long list.

@@ -2,53 +2,88 @@
     padding: 8px;
     width: 100%;
     text-align: center;
-    border: 2px #00cccc dashed;
+    border: 2px #ffffff dashed;
     color: #0000ff;
+    font-family: Tahoma, Arial, Verdana, Sans-Serif;
+    font-size: 3.5em;
+    color: #0000ff;
+    font-weight: bold;
+}
+#search_textfield #searchterm { background-image: url(../images/search.jpg); 
+            background-repeat: no-repeat;
+            background-position: center left;
+            padding-left: 1em;
+	    padding-top: 0.5em;
+	    padding-bottom: 0.5em;
+            -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;
+	    background-color: #f0f0f0;
+	    border-color: #000000;
+	    font-weight: bold;
+	    width: 28%;
+}
+#pagecontent {
+    margin: 0 auto;
+    width: 100%;
 }
 #mainpage {
-border: 5px #000000 solid;
+    border: 5px #ffffff solid;
+    background-color: #f0f0f0;
+    width: 75%;
+    margin: 0 auto;
 }
 #search_textfield {
     width: 100%;
     text-align: center;
     top: 0px;
-    border: 2px #0000cc dashed;
+    border: 2px #ffffff dashed;
  }
 #listofpresentations {
     position: relative;
-    border: 2px #0000cc dashed;
+    border: 2px #ffffff dashed;
     text-align: center;
     height: 250px;
+    width: 100%;
 }
 #viewpresentation {
     position: relative;
-    border: 2px #0000cc dashed;
+    border: 2px #ffffff dashed;
     text-align: center;
     height: 365px;
+    width: 100%;
 }
 #video {
     width: 35%;
+    text-align: center;
 }
 /*#video  #player was previously #video #video_control */
-#video #video_control {
+#video #video_preview {
     position: absolute;
     width: 322px;
-    border: 1px #000000 dashed;
+    height: 240px;
+    border: 1px #ffffff dashed;
+    text-align: center;
 }
-
+#video #video_control {
+    position: absolute;
+    width: 480px;
+    height: 360px;
+    border: 1px #ffffff dashed;
+    text-align: center;
+}
 /*#video  #player was previously #video #video_control */
 #video #player {
     position: absolute;
     width: 322px;
-    border: 1px #000000 dashed;
+    border: 1px #ffffff dashed;
 }
 
-#title, #date_published, #total_comments, #view_comments {
+#author, #title, #date_published, #total_comments {
+    font-family: Tahoma, Arial, Verdana, Sans-Serif;
     text-align: left;
-    left: 43%;
+    left: 50%;
     position: relative;
     width: 100%;
-    top: 0px;
+    padding-top: 10px;
 }
 #comments, #write_comment, #clips_controller {
     text-align: left;
@@ -56,11 +91,41 @@ border: 5px #000000 solid;
     position: relative;
     width: 100%;
 }
-#heading {
-    font-family: Tahoma, Arial, Verdana, Sans-Serif;
-    font-size: 1.2em;
-    color: #0000ff;
+#search_textfield{
+width: 100%;
+border: #ffffff dashed 1px;
+}
+#div_back{
+    position: absolute;
+    width: 35%;
+}
+#back {
+ background-color: #ff6600;
+ color: #ffffff;
+ font-weight: bold;
+ border-color: #ff6600;
+ padding-left: 1.5em;
+ padding-right: 1.5em;
+ padding-top: 0.3em;
+ padding-bottom: 0.3em;
+}
+#div_download{
+    width: 60%;
+    position: relative;
+    left: 27%;
+}
+#download {
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-image: url(../images/download_.gif); 
+    background-color: #0099cc;
+    color: #ffffff;
     font-weight: bold;
+    border-color: #0099cc;
+    padding-left: 2.0em;
+    padding-right: 1.5em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
 }
 #indentation {
     padding-left: 15px;

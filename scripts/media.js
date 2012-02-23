@@ -43,13 +43,12 @@ function getValuesfromopencast(){
     alert(values);
 }
 function clearfield(){
-    document.searchterm.value='';
+if(document.getElementById("searchterm").value == '&nbsp;Search') {document.getElementById("searchterm").value = ''};
 }
 function postcomment(){
 var divcontent = document.getElementById('commentfield');
 divcontent.innerHTML = "Name:<br/><input type='text' size='30' name='comment_author'/> <p> Message:<br/><textarea rows='14' cols='38' name='comment'></textarea><br/><input type='submit' name='submit' value='Submit'/><input type='hidden' name='msg_type' value='Posted'/></p>";
 }
-
 
 function hiddenInputElement(){};
 				hiddenInputElement.prototype = {

@@ -22,14 +22,15 @@ OpenCast
 class searchformedia {	  
 //constructor function
 function searchformedia(){
+
 $html1 = <<<EOD
 <section>
 <div id="listofpresentations">
 <div id="video">
-<a href="viewvideo.php?id=
+<a href="viewvideo.php?vid=
 EOD;
 $html2 = <<<EOD
-"><video id="video_control" width="320" height="240" controls="controls">
+"><video id="video_preview" controls="controls">
   <source src="
 EOD;
 
@@ -52,17 +53,24 @@ EOD;
 
 $html5 = <<<EOD
 </div>
-<div id="date_published">
+<div id="author">
 EOD;
 
 $html6 = <<<EOD
 </div>
-<div id="total_comments">38 comments</div>
-<div id="view_comments">View Comments</div>
+<div id="date_published">
+EOD;
+
+$html7 = <<<EOD
+</div>
+<div id="total_comments">
+EOD;
+
+$html8 = <<<EOD
+</div>
 </div>
 </section>
 EOD;
-
 
 
 
@@ -83,14 +91,21 @@ $p = 0;
 $n = 6;
 $this->n = $n;
 $sql= "select str_title, match(str_title) against('".$searchterm."') as relevance from mediadetails where match(str_title) against('".$searchterm."') LIMIT $p,$this->n";
+$sql= "select str_title, str_author, time_pubDate, str_url, match(str_title, str_author) against('".$searchterm."') as relevance from mediadetails where match(str_title, str_author, time_pubDate, str_url) against('".$searchterm."')";
 */
-$sql= "select str_title,time_pubDate,str_url, match(str_title) against('".$searchterm."') as relevance from mediadetails where match(str_title,time_pubDate,str_url) against('".$searchterm."')";
+$sql= "select str_title,str_author,time_pubDate,str_url, match(str_title) against('".$searchterm."') as relevance from mediadetails where match(str_title,str_author,time_pubDate,str_url) against('".$searchterm."')";
 $result=$db->query($sql);
 
 
 echo "<span class='fontstyle1'><strong>Search Result</strong></span><hr class='dashline' width='100%' size='1'>";
 	  while($row=$result->fetch()){
-        echo $html1 . $row['str_url'] . $html2 . $row['str_url'] . $html3 . $row['str_url'] . $html4 . $row['str_title'] . $html5 . $row['time_pubDate'] . $html6;
+             if(isset($row['str_author'])){
+	       //ignore $no_of_comments between $html7 and $html8 for both echos
+	       echo $html1 . $row['str_url'] . $html2 . $row['str_url'] . $html3 . $row['str_url'] . $html4 . $row['str_title'] . $html5 . $row['str_author'] . $html6 . $row['time_pubDate'] . $html7 . $html8;}
+      else{      	
+	echo $html1 . $row['str_url'] . $html2 . $row['str_url'] . $html3 . $row['str_url'] . $html4 . $row['str_title'] . $html5 . $html6 . $row['time_pubDate'] . $html7 . $html8;
+}
+// echo $html1 . $row['str_url'] . $html2 . $row['str_url'] . $html3 . $row['str_url'] . $html4 . $row['str_title'] . $html5 . $row['time_pubDate'] . $html6;
  
 }
 

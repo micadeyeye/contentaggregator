@@ -22,8 +22,8 @@ class Session {
     * @access public
     */
     function Session () {
- session_save_path("/home/users/web/b590/ez.asmicom/cgi-bin/tmp");
-        #session_start();
+ #session_save_path("/home/users/web/b590/ez.asmicom/cgi-bin/tmp");
+        session_start();
     }
 
     /**
