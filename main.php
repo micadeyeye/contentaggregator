@@ -54,7 +54,11 @@ $html1 = <<<EOD
 <a href="viewvideo.php?vid=
 EOD;
 $html2 = <<<EOD
+<<<<<<< HEAD
 "><video id="video_preview" controls="controls">
+=======
+"><video id="video_control" controls="controls">
+>>>>>>> 4209e8dab01cbca632d3004e061e65e14890c3ed
   <source src="
 EOD;
 
@@ -96,8 +100,13 @@ $html8 = <<<EOD
 </section>
 EOD;
 //comment disable the youtube feed
+<<<<<<< HEAD
 $feedurls = Array('http://media.uct.ac.za/feeds/rss/2.0/latest/index.rss', 'http://www.youtube.com/rss/tag/uct.rss');
 //$feedurls = Array('_index.rss');
+=======
+//$feedurls = Array('index.rss', 'http://www.youtube.com/rss/tag/uct.rss');
+$feedurls = Array('index.rss');
+>>>>>>> 4209e8dab01cbca632d3004e061e65e14890c3ed
 
 require('database/connx.php');
 // Connect to MySQL

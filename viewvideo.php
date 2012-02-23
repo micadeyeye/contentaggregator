@@ -29,7 +29,11 @@ if(isset($_POST['submit'])){$instmedialist->savecomments();}
 <img src="images/cet.gif"/>OPENCAST
 </div>
 </header>
+<<<<<<< HEAD
 <div id="search_textfield"><div id="div_back"><input type="button" name="back" id="back" value="Back" onclick="history.go(-1);"/></div> <div id="div_download"><input type="button" id="download" name="download" value="Download" onclick="window.open('<?php echo $_GET['vid'];?>');"/></div></div>
+=======
+<div id="search_textfield"><input type="button" name="back" id="back" value="Back"/>  <input type="button" id="download" name="download" value="Download"/></div>
+>>>>>>> 4209e8dab01cbca632d3004e061e65e14890c3ed
 <div>
 
 <!--
@@ -72,12 +76,17 @@ $instmedialist->displaycomments();
 </div>
 <div id="write_comment"><a href="#postcomment" onclick="postcomment();">Write a Comment</a></div>
 </div>
+<<<<<<< HEAD
   <div id="search_textfield"><?php 
 $chkcurrentclipurl = &$instmedialist->clipinfo->get('currentclipurl');
 
 //if((!isset($chkcurrentclipurl))&&(isset($_GET['vid']))){
 if(isset($_GET['vid'])){
     //$clipinfo = new Session();
+=======
+<div id="clips_controller"><img src="images/__left_images.jpg"/>Previous Clip &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Next Clip <img src="images/__right_images.jpg"/></div>
+</section>
+>>>>>>> 4209e8dab01cbca632d3004e061e65e14890c3ed
 
   $instmedialist->clipinfo->del('currentclipurl');
   //$instmedialist->clipinfo->destroy();
