@@ -13,7 +13,6 @@
             background-repeat: no-repeat;
             background-position: center left;
             padding-left: 1em;
-<<<<<<< HEAD
 	    padding-top: 0.5em;
 	    padding-bottom: 0.5em;
             -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;
@@ -31,18 +30,6 @@
     background-color: #f0f0f0;
     width: 75%;
     margin: 0 auto;
-=======
-        padding-top: 0.5em;
-	    padding-bottom: 0.5em;
-            -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;
-	    background-color: #f0f0f0;
-	    border-color: #ffffff;
-	    font-weight: bold;
-	    width: 28%;
-}
-#mainpage {
-    border: 5px #ffffff solid;
->>>>>>> 4209e8dab01cbca632d3004e061e65e14890c3ed
 }
 #search_textfield {
     width: 100%;
@@ -72,7 +59,6 @@
 #video #video_preview {
     position: absolute;
     width: 322px;
-<<<<<<< HEAD
     height: 240px;
     border: 1px #ffffff dashed;
     text-align: center;
@@ -81,8 +67,6 @@
     position: absolute;
     width: 480px;
     height: 360px;
-=======
->>>>>>> 4209e8dab01cbca632d3004e061e65e14890c3ed
     border: 1px #ffffff dashed;
     text-align: center;
 }
@@ -107,7 +91,6 @@
     position: relative;
     width: 100%;
 }
-<<<<<<< HEAD
 #search_textfield{
 width: 100%;
 border: #ffffff dashed 1px;
@@ -116,8 +99,6 @@ border: #ffffff dashed 1px;
     position: absolute;
     width: 35%;
 }
-=======
->>>>>>> 4209e8dab01cbca632d3004e061e65e14890c3ed
 #back {
  background-color: #ff6600;
  color: #ffffff;
@@ -128,14 +109,11 @@ border: #ffffff dashed 1px;
  padding-top: 0.3em;
  padding-bottom: 0.3em;
 }
-<<<<<<< HEAD
 #div_download{
     width: 60%;
     position: relative;
     left: 27%;
 }
-=======
->>>>>>> 4209e8dab01cbca632d3004e061e65e14890c3ed
 #download {
     background-repeat: no-repeat;
     background-position: center left;

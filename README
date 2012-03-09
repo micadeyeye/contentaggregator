@@ -1,3 +1,3 @@
-This content aggregator pulls feeds (video & text) from #UCT tag in Youtube (at http://www.youtube.com/rss/tag/uct.rss) and the UCT opencast implementation (called matterhorn at http://media.uct.ac.za/engage/ui).
+This content aggregator is a mobile application written in HTML5. It pulls feeds (video & text) from #UCT tag in Youtube (at http://www.youtube.com/rss/tag/uct.rss) and the UCT opencast implementation (called matterhorn at http://media.uct.ac.za/engage/ui).
 
-It allows commenting on the presentations, and a user could search for a presentation from a long list.
+It allows commenting on the presentations, and a user could search for a presentation from a long list. The application runs at http://www.ngportal.com/opencast

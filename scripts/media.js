@@ -1,4 +1,4 @@
-// 2. This code loads the IFrame Player API code asynchronously.
+      // 2. This code loads the IFrame Player API code asynchronously.
       var tag = document.createElement('script');
       tag.src = "http://www.youtube.com/player_api";
       var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -40,15 +40,65 @@
 function getValuesfromopencast(){
     objOpencastvalues = new hiddenInputElement();
     values = objOpencastvalues.getHiddenElementString();
-    alert(values);
+   //alert(values);
 }
 function clearfield(){
 if(document.getElementById("searchterm").value == '&nbsp;Search') {document.getElementById("searchterm").value = ''};
 }
 function postcomment(){
 var divcontent = document.getElementById('commentfield');
-divcontent.innerHTML = "Name:<br/><input type='text' size='30' name='comment_author'/> <p> Message:<br/><textarea rows='14' cols='38' name='comment'></textarea><br/><input type='submit' name='submit' value='Submit'/><input type='hidden' name='msg_type' value='Posted'/></p>";
+    divcontent.innerHTML = "Name:<br/><input type='text' size='30' name='comment_author'/> <p> Message:<br/><textarea rows='14' cols='38' name='comment'></textarea><br/><input type='button' name='submit' value='Submit' onclick='submitForm();'/><input type='hidden' name='msg_type' value='Posted'/></p>";
 }
+
+
+
+function WriteToDB(url, content)	// url is the script and data is a string of parameters
+	{ 
+		var xhr = createXHR();
+
+		xhr.onreadystatechange=function()
+		{ 
+			if(xhr.readyState == 4)
+			{
+			    if(xhr.status == 200 || xhr.status == 0)
+				{
+					//append the new comment and the link "add comment here"
+					var doc = xhr.responseText;
+				    var divcontent = document.getElementById('commentfield');
+				    divcontent.innerHTML = doc + "<br/><div id='write_comment'><a href='#postcomment' onclick='postcomment();'>Write a Comment</a></div>";
+					//var element = doc.getElementsByTagName('root').item(0);
+					//document.ajax.dyn.value= element.firstChild.data;
+
+				}	
+				else	
+				{
+					//document.ajax.dyn.value="Error: returned status code " + xhr.status + " " + xhr.statusText;
+				}	
+			}
+		}; 
+	    //this is a synchronous call; wait for response
+		xhr.open("POST", url, false);		
+		xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+		xhr.send(content); 
+	} 
+
+
+function submitForm()
+	{ 
+		var strcomment = document.commentform.comment.value;
+		var strcomment_author = document.commentform.comment_author.value;
+	    var strpresentation_url = document.commentform.presentation_url.value;
+	    var strmsg_type = document.commentform.msg_type.value;
+	//write comment to DB
+	WriteToDB("http://www.ngportal.com/opencast/main.php", "submit=true&comment=" + strcomment + "&comment_author=" + strcomment_author + "&vid=" + strpresentation_url + "&msg_type=" + strmsg_type);
+	    //retrieve comments
+	    WriteToDB("http://www.ngportal.com/opencast/main.php", "getcomments=true&vid=" + strpresentation_url);
+
+	    //var storing = document.getElementById("storage");
+		//storing.innerHTML = "<p>Now you can view what you sent in the file <b><a href='ajax-post-text.txt' target='_parent'>ajax-post-text.txt</a></b>. ";
+	} 
+
+
 
 function hiddenInputElement(){};
 				hiddenInputElement.prototype = {
