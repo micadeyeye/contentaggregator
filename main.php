@@ -12,7 +12,7 @@ libxml_use_internal_errors(true);
 $ytxml = @simplexml_load_file("http://www.youtube.com/rss/tag/uct.rss");
 if($ytxml){ $ytxml->asXML('youtube.xml'); }
 
-/* echo friendly erro message
+/* echo friendly error message
 if($ytxml === false) {
     echo "<p> Sorry, the current Youtube XML contains some errors </p>";
     foreach(libxml_get_errors() as $error) {
